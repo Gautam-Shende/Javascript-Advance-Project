@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form with Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <form id="multiStepForm">
+            <!-- Step 1 -->
+            <div class="form-step active">
+                <h2>Step 1: Personal Information</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required>
+                    <span class="error-message">Please enter your first name</span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required>
+                    <span class="error-message">Please enter your last name</span>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="form-step">
+                <h2>Step 2: Contact Information</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <span class="error-message">Please enter a valid email address</span>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                    <span class="error-message">Please enter a valid phone number</span>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="form-step">
+                <h2>Step 3: Account Details</h2>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                    <span class="error-message">Please enter a username</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <span class="error-message">Please enter a password</span>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

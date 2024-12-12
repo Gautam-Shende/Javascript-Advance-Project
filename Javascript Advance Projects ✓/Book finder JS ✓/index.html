@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Book Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">BookFinder</div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Discover Your Next Favorite Book</h1>
+            <p>Search and find books from our vast collection</p>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for books...">
+                <button id="searchButton" class="btn-primary">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="results-section">
+        <h2>Search Results</h2>
+        <div id="bookResults" class="books-container">
+            <!-- Book Cards will be dynamically inserted here -->
+        </div>
+    </section>
+
+</body>
+</html>

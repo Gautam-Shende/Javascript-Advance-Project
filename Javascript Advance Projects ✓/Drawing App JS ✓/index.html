@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Drawing Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <div class="tool">
+                <label for="pencil"><ion-icon name="pencil-outline"></ion-icon></label>
+                <input type="radio" id="pencil" name="tool" value="pencil" checked>
+            </div>
+            <div class="tool">
+                <label for="eraser"><ion-icon name="file-tray-full-outline"></ion-icon></label>
+                <input type="radio" id="eraser" name="tool" value="eraser">
+            </div>
+            <div class="tool">
+                <label for="rectangle"><ion-icon name="square-outline"></ion-icon></label>
+                <input type="radio" id="rectangle" name="tool" value="rectangle">
+            </div>
+            <div class="tool">
+                <label for="circle"><ion-icon name="ellipse-outline"></ion-icon></label>
+                <input type="radio" id="circle" name="tool" value="circle">
+            </div>
+            <div class="tool">
+                <input type="color" id="colorPicker" value="#000000">
+            </div>
+            <div class="tool">
+                <label for="size">Size</label>
+                <input type="range" id="size" min="1" max="10" value="2">
+            </div>
+        </div>
+        <canvas id="drawingCanvas"></canvas>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>

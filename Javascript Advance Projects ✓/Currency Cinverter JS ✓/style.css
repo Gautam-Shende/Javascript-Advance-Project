@@ -1,0 +1,113 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.converter-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    height: 55vh;
+    width: 60%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ .title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.converter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.currency {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.currency-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency-flag {
+    width: 40px;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid #000;
+    margin-left: 20px;
+}
+
+select, input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 220px;
+    outline: none;
+}
+
+input {
+    font-size: 18px;
+    
+}
+
+input:focus, select:focus {
+    border-color: #1e90ff;
+}
+
+.convert-btn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px;
+    width: 220px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+.convert-btn:hover {
+    background-color: #1c86ee;
+    transform: scale(.9);
+}
+
+.result {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+} 
+
+@media (max-width: 400px) {
+    .converter-container {
+        width: 100%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="video-container">
+        <video id="video" class="video-player" src="video.mp4"></video>
+
+        <div class="controls">
+            <button id="play-pause" class="control-btn">
+                <i class="material-icons">play_arrow</i>
+            </button>
+
+            <input type="range" id="seek-bar" class="seek-bar" value="0">
+            
+            <button id="volume-btn" class="control-btn">
+                <i class="material-icons">volume_up</i>
+            </button>
+
+            <!-- <input type="range" id="volume-bar" class="volume-bar" value="50" max="100"> -->
+
+            <span id="time-display">00:00 / 00:00</span>
+
+            <button id="fullscreen-btn" class="control-btn">
+                <i class="material-icons">fullscreen</i>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
