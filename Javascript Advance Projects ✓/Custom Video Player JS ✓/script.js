@@ -6,7 +6,6 @@ const volumeBar = document.getElementById('volume-bar');
 const timeDisplay = document.getElementById('time-display');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
 
-// Play/Pause Toggle
 playPauseBtn.addEventListener('click', () => {
     if (video.paused) {
         video.play();
@@ -17,7 +16,6 @@ playPauseBtn.addEventListener('click', () => {
     }
 });
 
-// Update Seek Bar and Time Display
 video.addEventListener('timeupdate', () => {
     const value = (video.currentTime / video.duration) * 100;
     seekBar.value = value;
@@ -30,13 +28,11 @@ video.addEventListener('timeupdate', () => {
     timeDisplay.textContent = `${formatTime(currentMinutes)}:${formatTime(currentSeconds)} / ${formatTime(durationMinutes)}:${formatTime(durationSeconds)}`;
 });
 
-// Seek Video
 seekBar.addEventListener('input', () => {
     const time = (seekBar.value / 100) * video.duration;
     video.currentTime = time;
 });
 
-// Volume Control
 volumeBtn.addEventListener('click', () => {
     if (video.muted) {
         video.muted = false;
@@ -51,7 +47,6 @@ volumeBar.addEventListener('input', () => {
     video.volume = volumeBar.value / 100;
 });
 
-// Fullscreen Toggle
 fullscreenBtn.addEventListener('click', () => {
     if (!document.fullscreenElement) {
         video.requestFullscreen();
@@ -60,7 +55,6 @@ fullscreenBtn.addEventListener('click', () => {
     }
 });
 
-// Format Time Display
 function formatTime(time) {
     return time < 10 ? '0' + time : time;
 }
